@@ -8,3 +8,14 @@ Pravila Igre:
 - Prvi igrac koji dode do 100 bodova u ukupnom zbroju pobjeduje
 
 */
+
+var score, activePlayer, dice, roundScore;
+score = [0, 0];
+roundScore = 0;
+activePlayer = 0;
+dice = Math.floor((Math.random() * 6) + 1);
+console.log(dice);
+// ukoliko zelimo unijeti html kod trebamo koristiti innerHtml umjesto textContent
+document.querySelector('#current-' + activePlayer).textContent = dice; 
+// pocetno skrivanje kockice
+document.querySelector('.dice').style.display = 'none';
